@@ -1,0 +1,49 @@
+root = true
+
+[*.cs]
+# Sort usings alphabetically and place System directives first
+dotnet_sort_system_directives_first = true
+
+# Add blank line between using groups
+dotnet_separate_import_directive_groups = true
+
+# Define using statement order groups
+dotnet_import_sort_order = system_first, blank_lines_between_groups
+
+# Define custom groups
+dotnet_import_group.system_first.title = System
+dotnet_import_group.system_first.pattern = System
+
+dotnet_import_group.third_party.title = 3rd party
+dotnet_import_group.third_party.pattern = System.*, Microsoft.*, Newtonsoft.*, etc.*
+
+dotnet_import_group.project_references.title = Project References
+dotnet_import_group.project_references.pattern = YourProjectName.*
+
+# Ensure blank line before class declaration
+csharp_style_blank_line_before_class = true
+
+# Use 'var' when the type is apparent
+csharp_style_var_when_type_is_apparent = true:suggestion
+
+# Use 'var' for built-in types
+csharp_style_var_for_built_in_types = true:suggestion
+
+# Use 'var' elsewhere
+csharp_style_var_elsewhere = true:suggestion
+
+# End of file line
+insert_final_newline = true
+
+# Indentation
+indent_style = space
+indent_size = 4
+
+# Line endings
+end_of_line = crlf
+
+# Character encoding
+charset = utf-8
+
+# Trimming whitespace
+trim_trailing_whitespace = true
